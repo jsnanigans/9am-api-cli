@@ -3,14 +3,13 @@ import { NAP_DEV_BASE_URL } from "../../../../base.ts";
 const url = NAP_DEV_BASE_URL;
 url.pathname = "/v1/admin/auth/identity/assume";
 
-console.log(url);
-const body = {
-  userId: "63f64133-61f8-4483-977d-b34e6ca9f367",
-  role: "USER",
-  reasoning: "testing api",
-};
-
 const args = Deno.args;
+
+const body = {
+  userId: args[0] ?? prompt("User ID: "),
+  role: "USER",
+  reasoning: args[1] ?? prompt("Reasoning: "),
+};
 
 class Rq {
   url: URL;
@@ -40,7 +39,7 @@ class Rq {
       email: Deno.env.get("API_AUTH_EMAIL"), //"brendan@9am.health",
       password: Deno.env.get("API_AUTH_PASSWORD"), //"password",
       sessionName: "Test",
-      mfaToken: args[0],
+      mfaToken: args[2] ?? prompt("MFA Token: "),
       role: "DEVELOPER",
     };
     if (!data.email || !data.password || !data.mfaToken) {
