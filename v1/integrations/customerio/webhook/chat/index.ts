@@ -5,9 +5,13 @@ url.pathname = "/v1/integrations/customerio/webhook/chat";
 
 console.log(url);
 const body = {
-  id: "e50b5ac3dc43caa5c88718762c0a74f7",
+  // id: "6ab3bc9ecb3182af135f015e7fbf3c19", // pat transcarent id
+  // id: "f083d025330e9c22eccf129e578bf91e", // t1
+  // id: "fc126daf22571ffa6b76330443d149ae", // p.sobik
+  id: "fd68348b7a109e1ebeabb6b9652c3a02", // g.b
+  // id: "206fc1814672fc94e87d074f36724d1b", // hwj
   message: `
-><p>Thanks for sending in your reading! A blood pressure reading of less than 80/40 indicates that you need immediate medical attention, so we need to take a few more steps:</p><p>Wait about five minutes and take your blood pressure reading again. Here are some tips on taking your blood pressure readings at home <a href="https://www.heart.org/en/health-topics/high-blood-pressure/understanding-blood-pressure-readings/monitoring-your-blood-pressure-at-home" target="_blank" class="css-1h5x3dy">Monitoring Your Blood Pressure at Home.</a></p><p><b>2. Please call 911 if your second blood pressure reading is also less than 80/40 AND you have any of the following symptoms</b>, as you may be at risk for shock (when not enough oxygen is going to your brain, which could be life-threatening.)</p><ul><li>Dizziness/lightheadedness/fainting</li><li>Severe nausea</li><li>Blurry vision</li><li>Cold, pale and clammy skin</li><li>Lack of concentration</li><li>Extreme thirst or dehydration</li></ul> <p>OR</p><p><b>Please visit an urgent care clinic (or emergency care if it's after hours) if your blood pressure reading is less than 80/40, even if you have no symptoms</b>. A very low blood pressure reading puts you at risk of shock (when not enough oxygen is going to your brain, which could be life-threatening), so it's important to raise your blood pressure reading as soon as possible.</p><p>3. A 9am Care Team member will reach out to you as soon as possible to assist you in getting care and review blood pressure treatment options, but we cannot provide urgent or emergency care, so it is important that you seek medical attention according to Step #2.</p>
+<div type='9am:video' src='https://vimeo.com/1041195253/e606fceee7'></div><p>{{snippets.greeting}}<p> Welcome to 9amHealth!
 `,
 };
 
